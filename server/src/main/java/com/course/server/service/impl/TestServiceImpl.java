@@ -1,5 +1,6 @@
 package com.course.server.service.impl;
 
+import com.course.server.domain.TestExample;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.course.server.domain.Test;
@@ -20,6 +21,8 @@ public class TestServiceImpl implements TestService {
 
     @Override
     public List<Test> list() {
-        return testMapper.list();
+        TestExample testExample = new TestExample();
+        testExample.setOrderByClause("id asc");
+        return testMapper.selectByExample(testExample);
     }
 }
