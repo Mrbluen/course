@@ -1,0 +1,7 @@
+com\course\server\mapper\TestMapper.class
+com\course\server\util\Base64ToMultipartFile.class
+com\course\server\service\impl\TestServiceImpl.class
+com\course\server\service\TestService.class
+com\course\server\util\CopyUtil.class
+com\course\server\util\UuidUtil.class
+com\course\server\domain\Test.class
