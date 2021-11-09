@@ -1,3 +1,3 @@
-com\course\system\controller\TestController.class
-com\course\system\config\SystemApplication.class
-com\course\system\controller\HelloController.class
+com/course/system/config/SystemApplication.class
+com/course/system/controller/TestController.class
+com/course/system/controller/HelloController.class
