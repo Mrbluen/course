@@ -1,7 +1,10 @@
 import Vue from 'vue'
 import App from './app.vue'
 import router from './router'
-Vue.config.productionTip = false
+import axios from 'axios'
+
+Vue.prototype.$ajax = axios;
+Vue.config.productionTip = false;
 
 new Vue({
   router,
