@@ -5,11 +5,14 @@ import com.course.server.domain.ChapterExample;
 import com.course.server.domain.Test;
 import com.course.server.domain.TestExample;
 import com.course.server.dto.ChapterDto;
+import com.course.server.dto.PageDto;
 import com.course.server.mapper.ChapterMapper;
 import com.course.server.mapper.TestMapper;
 import com.course.server.service.ChapterService;
 import com.course.server.service.TestService;
 import com.course.server.util.CopyUtil;
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -28,9 +31,12 @@ public class ChapterServiceImpl implements ChapterService {
     private ChapterMapper chapterMapper;
 
     @Override
-    public List<ChapterDto> list() {
+    public void list(PageDto pageDto) {
+        PageHelper.startPage(pageDto.getPage(),pageDto.getSize());
         ChapterExample chapterExample = new ChapterExample();
         List<Chapter> chapterList = chapterMapper.selectByExample(chapterExample);
+        PageInfo<Chapter> pageInfo = new PageInfo<>(chapterList);
+        pageDto.setTotal(pageInfo.getTotal());
         List<ChapterDto> categoryDtoList = CopyUtil.copyList(chapterList, ChapterDto.class);
 //        for (int i = 0, l= chapterList.size(); i<1; i++) {
 //            Chapter chapter = chapterList.get(i);
@@ -38,6 +44,6 @@ public class ChapterServiceImpl implements ChapterService {
 //            BeanUtils.copyProperties(chapter,chapterDto);
 //            chapterDtos.add(chapterDto);
 //        }
-        return categoryDtoList;
+        pageDto.setList(categoryDtoList);
     }
 }

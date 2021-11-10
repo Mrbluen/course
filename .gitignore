@@ -3,3 +3,4 @@
 /business/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst
 /business/target/maven-archiver/pom.properties
 .idea/*
+/server/target/
