@@ -7,6 +7,7 @@ import com.course.server.domain.Test;
 import com.course.server.mapper.TestMapper;
 import com.course.server.service.TestService;
 
+import javax.annotation.Resource;
 import java.util.List;
 
 /**
@@ -16,7 +17,7 @@ import java.util.List;
 @Service
 public class TestServiceImpl implements TestService {
 
-    @Autowired
+    @Resource
     private TestMapper testMapper;
 
     @Override

@@ -11,12 +11,15 @@ import com.course.server.mapper.TestMapper;
 import com.course.server.service.ChapterService;
 import com.course.server.service.TestService;
 import com.course.server.util.CopyUtil;
+import com.course.server.util.UuidUtil;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.util.StringUtils;
 
+import javax.annotation.Resource;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -27,7 +30,7 @@ import java.util.List;
 @Service
 public class ChapterServiceImpl implements ChapterService {
 
-    @Autowired
+    @Resource
     private ChapterMapper chapterMapper;
 
     @Override
@@ -46,4 +49,30 @@ public class ChapterServiceImpl implements ChapterService {
 //        }
         pageDto.setList(categoryDtoList);
     }
+
+    @Override
+    public void save(ChapterDto chapterDto) {
+       Chapter chapter = CopyUtil.copy(chapterDto,Chapter.class);
+       if (StringUtils.isEmpty(chapterDto.getId())){
+           this.insert(chapter);
+       }else {
+           this.update(chapter);
+       }
+    }
+
+    @Override
+    public void delete(String id) {
+        chapterMapper.deleteByPrimaryKey(id);
+    }
+
+    private void insert(Chapter chapter) {
+        chapter.setId(UuidUtil.getShortUuid());
+        chapterMapper.insert(chapter);
+    }
+
+    private void update(Chapter chapter) {
+        chapterMapper.updateByPrimaryKey(chapter);
+    }
+
+
 }

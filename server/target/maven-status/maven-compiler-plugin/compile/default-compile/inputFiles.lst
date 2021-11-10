@@ -1,4 +1,5 @@
 /Users/changsheng/IdeaProjects/course/server/src/main/java/com/course/server/service/TestService.java
+/Users/changsheng/IdeaProjects/course/server/src/main/java/com/course/server/config/TransactionManagementConfig.java
 /Users/changsheng/IdeaProjects/course/server/src/main/java/com/course/server/domain/Chapter.java
 /Users/changsheng/IdeaProjects/course/server/src/main/java/com/course/server/domain/ChapterExample.java
 /Users/changsheng/IdeaProjects/course/server/src/main/java/com/course/server/domain/TestExample.java
@@ -6,9 +7,13 @@
 /Users/changsheng/IdeaProjects/course/server/src/main/java/com/course/server/util/CopyUtil.java
 /Users/changsheng/IdeaProjects/course/server/src/main/java/com/course/server/service/ChapterService.java
 /Users/changsheng/IdeaProjects/course/server/src/main/java/com/course/server/mapper/ChapterMapper.java
+/Users/changsheng/IdeaProjects/course/server/src/main/java/com/course/server/dto/ResponseDto.java
 /Users/changsheng/IdeaProjects/course/server/src/main/java/com/course/server/util/Base64ToMultipartFile.java
 /Users/changsheng/IdeaProjects/course/server/src/main/java/com/course/server/dto/ChapterDto.java
+/Users/changsheng/IdeaProjects/course/server/src/main/java/com/course/server/dto/PageDto.java
+/Users/changsheng/IdeaProjects/course/server/src/main/java/com/course/server/config/KaptchaConfig.java
 /Users/changsheng/IdeaProjects/course/server/src/main/java/com/course/server/service/impl/ChapterServiceImpl.java
 /Users/changsheng/IdeaProjects/course/server/src/main/java/com/course/server/util/UuidUtil.java
 /Users/changsheng/IdeaProjects/course/server/src/main/java/com/course/server/mapper/TestMapper.java
+/Users/changsheng/IdeaProjects/course/server/src/main/java/com/course/server/config/LogAspect.java
 /Users/changsheng/IdeaProjects/course/server/src/main/java/com/course/server/service/impl/TestServiceImpl.java

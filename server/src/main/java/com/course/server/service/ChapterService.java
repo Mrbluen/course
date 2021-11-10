@@ -14,4 +14,9 @@ import java.util.List;
 
 public interface ChapterService {
     public void list(PageDto pageDto);
+
+    public void save(ChapterDto chapterDto);
+
+    void delete(String id);
+
 }
