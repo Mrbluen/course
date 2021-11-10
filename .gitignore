@@ -4,3 +4,11 @@
 /business/target/maven-archiver/pom.properties
 .idea/*
 /server/target/
+/business/target/classes/com/course/business/controller/ControllerExceptionHandler.class
+/generator/target/classes/com/course/generator/util/DbUtil.class
+/generator/target/classes/com/course/generator/enums/EnumGenerator.class
+/generator/target/classes/com/course/generator/server/*.class
+/generator/target/classes/com/course/generator/util/*.class
+/business/target/classes/com/course/business/controller/admin/*.class
+/generator/target/classes/com/course/generator/test/Test.class
+/generator/target/*
