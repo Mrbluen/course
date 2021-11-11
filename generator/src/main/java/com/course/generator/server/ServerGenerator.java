@@ -61,6 +61,10 @@ public class ServerGenerator {
         // 生成controller
         FreemarkerUtil.initConfig("controller.ftl");
         FreemarkerUtil.generator(toControllerPath + Domain + "Controller.java", map);
+
+//        // vue
+//        FreemarkerUtil.initConfig("vue.ftl");
+//        FreemarkerUtil.generator(toControllerPath + domain + ".vue", map);
     }
 
     /**
