@@ -11,4 +11,4 @@
 /generator/target/classes/com/course/generator/util/*.class
 /business/target/classes/com/course/business/controller/admin/*.class
 /generator/target/classes/com/course/generator/test/Test.class
-/generator/target/*
+/generator/target/
